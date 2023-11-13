@@ -162,13 +162,10 @@ function makeController($class = null)
                 }
 
                 filename;
-        makeController2($filename);
-
+            makeController2($filename);
         } else {
             $filename = ARG[2];
-
-            
-
+            makeController2($filename);
         }
     } else {
         echo colors("3", " # Please Enter Controller Name : ");
@@ -176,20 +173,19 @@ function makeController($class = null)
         $filename = trim(fgets(STDIN));
         echo "\e[0m";
         makeController2($filename);
-        
     }
 }
 
 
 function makeController2($filename)
 {
-                if (!str_contains($filename, "Controller")) {
-                $filename .= "Controller";
-            }
+    if (!str_contains($filename, "Controller")) {
+        $filename .= "Controller";
+    }
 
 
 
-            $fileContent = <<< filename
+    $fileContent = <<< filename
                 <?php
 
                 namespace App\Controllers;
@@ -204,14 +200,14 @@ function makeController2($filename)
 
                 filename;
 
-        
-        $filepath = "App" . DIRECTORY_SEPARATOR . "Controllers" . DIRECTORY_SEPARATOR . $filename . ".php";
 
-        if (!file_exists($filepath)) {
-            file_put_contents($filepath, $fileContent);
-            autoload();
-            echo colors("2", "\n # Controller has been created successfully \n");
-        } else {
-            echo colors("1", "\n # Controller name has already been used\n");
-        }
+    $filepath = "App" . DIRECTORY_SEPARATOR . "Controllers" . DIRECTORY_SEPARATOR . $filename . ".php";
+
+    if (!file_exists($filepath)) {
+        file_put_contents($filepath, $fileContent);
+        autoload();
+        echo colors("2", "\n # Controller has been created successfully \n");
+    } else {
+        echo colors("1", "\n # Controller name has already been used\n");
+    }
 }
