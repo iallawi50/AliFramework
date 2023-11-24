@@ -11,23 +11,20 @@ class Auth
     {
         if (self::check()) {
             $user = new User;
-            $user->id = $_SESSION["user"]->id;
-            $user->name = $_SESSION["user"]->name;
-            $user->username = $_SESSION["user"]->username;
-            $user->created_at = $_SESSION["user"]->created_at;
-            return $user;
+            $user->setId($_SESSION["user"]->id);
+            $user->setName($_SESSION["user"]->name);
+            $user->setUsername($_SESSION["user"]->username);
         } else {
             $user = new User;
-            $user->id = null;
-            $user->name = null;
-            return $user;
+            $user->setId(null);
         }
+        return $user;
     }
 
     public static function check()
     {
 
-        
+
         if (isset($_SESSION['user']) && !is_null($_SESSION['user'])) {
             return true;
         } else {
