@@ -8,7 +8,7 @@ use App\Controllers\AuthController;
 use App\Controllers\HomeController;
 
 Route::make()
-->get("", "home")
+->get("/", "home")
 // Authentication
 ->get("register", [AuthController::class, "register"], "guest")
 ->post("register", [AuthController::class, "store"], "guest")
