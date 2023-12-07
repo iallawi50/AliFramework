@@ -196,10 +196,34 @@ class Person extends Model
 
 ---
 
+## To Create Models Or Controller
+
+```sh
+# Create Model Only (Class Name)
+php marten make:model Post  
+                      ^^^^
+
+# Create Model With Controller (Class Name) 
+php marten make:model Post -c  
+                      ^^^^
+                      
+                      
+# Create Model With Controller (Controller Name) 
+php marten make:Controller Post
+# OR                      ^^^^
+php marten make:Controller PostController
+
+# There is no difference between them
+
+```
+
+---
 <div align=center>
 
 **Thank You For Reading**
 
 <a  target="_blank" href="https://ali-alabdullah.netlify.app">Ali Al-Abdullah</a>
+<a  target="_blank" href="https://instagram.com/dev_marten">@dev_marten</a>
+
 
 </div>
