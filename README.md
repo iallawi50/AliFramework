@@ -1,4 +1,4 @@
-# Blog
+# Quick Start
 
 ## Using PHP OOP
 
