@@ -11,12 +11,12 @@ class Auth
     {
         if (self::check()) {
             $user = new User;
-            $user->setId($_SESSION["user"]->id);
-            $user->setName($_SESSION["user"]->name);
-            $user->setUsername($_SESSION["user"]->username);
+            $user->id= $_SESSION["user"]->id;
+            $user->name=$_SESSION["user"]->name;
+            $user->username=$_SESSION["user"]->username;
         } else {
             $user = new User;
-            $user->setId(null);
+            $user->id = null;
         }
         return $user;
     }
