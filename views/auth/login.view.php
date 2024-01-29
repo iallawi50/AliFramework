@@ -1,3 +1,4 @@
+<?php component("header") ?>
 <div class="container mt-5">
 
 
@@ -24,3 +25,4 @@
         <button type="submit" class="btn btn-success rounded-0 col-12">Submit</button>
     </form>
 </div>
+<?php component("footer") ?>

@@ -1,28 +1,35 @@
 <?php
 
 use App\App;
-use PSpell\Config;
+use App\Middleware\Auth;
 
+
+function app_name($default = "Marten")
+{
+    return App::$entries["config"]["app"]["name"] ?? $default;
+}
 function home()
 {
     return $_SERVER["REQUEST_SCHEME"] . "://" . $_SERVER["SERVER_NAME"] . "/" . App::$entries["config"]["app"]["url"];
 }
 
+function asset($path = null)
+{
+ 
+    return $path ? home() . "/public/" . $path : home() . "/public/";
+}
 
 function view($VIEW_NAME, $data = null)
 {
     if ($data) {
         extract($data);
     }
-    component("header");
     require "./views/$VIEW_NAME.view.php";
-    component("footer");
 }
 
-function component($COMPONENT_NAME, $data=null)
+function component($COMPONENT_NAME, $data = null)
 {
-    if($data)
-    {
+    if ($data) {
         extract($data);
     }
     require "./views/components/$COMPONENT_NAME.component.php";
@@ -30,23 +37,23 @@ function component($COMPONENT_NAME, $data=null)
 
 function redirect($to)
 {
-    header("Location: $to");
+    header("Location: " . home() . "/" . $to);
 }
 
 function redirect_home()
 {
-    redirect(home());
+    redirect("");
 }
 
 function back()
 {
-    redirect($_SERVER["HTTP_REFERER"]);
+    header("Location: " . $_SERVER["HTTP_REFERER"]);
 }
 
 
 function notfound()
 {
-    redirect(home()."/404.php");
+    redirect(home() . "/404.php");
 }
 
 
@@ -54,4 +61,10 @@ function notauthorized($msg = "غير مصرح")
 {
     $_SESSION["not-authorized"] = $msg;
     return redirect_home();
+}
+
+
+function user()
+{
+    return Auth::user();
 }

@@ -34,7 +34,10 @@ abstract class Model
             $class = new static;
 
             foreach ($data as $key => $value) {
-
+                if($key == "password")
+                {
+                    continue;
+                }
                 $class->$key = $value;
             }
 

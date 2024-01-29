@@ -6,8 +6,13 @@ use App\Core\Request;
 use App\Models\User;
 
 
-class AuthController
+class AuthController extends Controller
 {
+
+    public function __construct()
+    {
+        return $this->middleware("guest");
+    }
 
 
     public function register()
@@ -99,7 +104,7 @@ class AuthController
             $password = sha1($password);
             if ($user) {
 
-                if ($user->username == $username && $user->password == $password) {
+                if ($user->username == $username && $user->getPassword() == $password) {
                     $_SESSION["user"] = $user;
                     return redirect_home();
                 } else {

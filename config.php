@@ -1,10 +1,11 @@
 <?php
 
 $dir = explode(DIRECTORY_SEPARATOR,__DIR__);
-$dir[count($dir) - 1];
+$dir=$dir[count($dir) - 1];
 
 return [
     "app" => [
+        "name" => $_ENV["APP_NAME"] ?? null,
         "url" => $_ENV["APP_URL"] ?? $dir
     ],
     "database" => [

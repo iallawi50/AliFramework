@@ -1,50 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<?php component("header") ?>
 
-
-</head>
-<body>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: #062e59;
-            min-height: 100vh;
-            font-family: sans-serif;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
-</head>
-
-<body>
-    <div>
-        
-    <h1>Marten Framework</h1>
-        <h3>Soon...</h3>
+<div class="welcome">
+    <h1>Marten</h1>
+    <a href="https://marten-framework.netlify.app/">Read Documentation</a>
 </div>
 
-</body>
-
-</html>
-    
-</body>
-</html>
+<?php component("footer") ?>

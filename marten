@@ -156,7 +156,7 @@ function makeController($class = null)
                 
                 use App\Models\\$class;
                 
-                class $filename
+                class $filename extends Controller
                 {
 
                 }
@@ -191,7 +191,7 @@ function makeController2($filename)
                 namespace App\Controllers;
 
                 
-                class $filename
+                class $filename extends Controller
                 {
 
 
