@@ -6,10 +6,6 @@ use App\Core\Route;
 use App\Core\Request;
 use App\Controllers\AuthController;
 use App\Controllers\HomeController;
-use App\Controllers\ReservationController;
-use App\Controllers\ServiceController;
-use App\Controllers\WashController;
-use App\Models\Service;
 
 Route::make()
 ->get("", [HomeController::class, "index"])

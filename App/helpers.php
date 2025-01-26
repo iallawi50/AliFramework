@@ -4,7 +4,7 @@ use App\App;
 use App\Middleware\Auth;
 
 
-function app_name($default = "Marten")
+function app_name($default = "Ali Framework")
 {
     return App::$entries["config"]["app"]["name"] ?? $default;
 }

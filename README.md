@@ -200,18 +200,18 @@ class Person extends Model
 
 ```sh
 # Create Model Only (Class Name)
-php marten make:model Post  
+php ali make:model Post  
                       ^^^^
 
 # Create Model With Controller (Class Name) 
-php marten make:model Post -c  
+php ali make:model Post -c  
                       ^^^^
                       
                       
 # Create Model With Controller (Controller Name) 
-php marten make:Controller Post
+php ali make:Controller Post
 # OR                      ^^^^
-php marten make:Controller PostController
+php ali make:Controller PostController
 
 # There is no difference between them
 
@@ -222,8 +222,7 @@ php marten make:Controller PostController
 
 **Thank You For Reading**
 
-<a  target="_blank" href="https://ali-alabdullah.netlify.app">Ali Al-Abdullah</a>
-<a  target="_blank" href="https://instagram.com/dev_marten">@dev_marten</a>
+<a  target="_blank" href="https://ali-alabdullah.netlify.app">Ali Hussain</a>
 
 
 </div>

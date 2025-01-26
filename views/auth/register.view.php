@@ -34,7 +34,7 @@
             </div>
         </div>
 
-        <button type="submit" class="btn btn-success rounded-0 col-12">Submit</button>
+        <button type="submit" class="btn btn-success rounded-0 col-12">تسجيل</button>
     </form>
 </div>
 <?php component("footer") ?>
