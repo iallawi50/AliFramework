@@ -89,14 +89,6 @@ post | register | AuthController@store | guest
 GET | login | AuthController@login | guest
 post | login | AuthController@authentication | guest
 post | logout | AuthController@logout | auth
-GET| posts/show | PostController@show |
-GET | posts/create | PostController@create | auth
-post | posts/create | PostController@edit | auth
-GET | posts/edit | PostController@update | auth
-post | posts/edit | PostController@store | auth
-post | posts/delete | PostController@delete | auth
-post | comments/create | CommentController@store | auth
-post | comments/delete | CommentController@delete | auth
 
 ---
 
